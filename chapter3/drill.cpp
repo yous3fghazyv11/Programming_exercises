@@ -18,18 +18,6 @@
 #define GREEN "\033[32m"
 #define NORMAL "\033[0m"
 
-double sum(std::vector<double> list);
-double convert(std::string to_unit, std::string from_unit, double value);
-void clear_input_stream();
-bool legal_unit(std::string unit);
-void help();
-void print_inputs(std::vector<double> input_values, std::vector<std::string> input_units);
-bool repeated(std::vector<double> list, double item);
-std::string get_user_unit();
-void get_input(std::vector<double>& input_values, double& current_value, bool& getting_input,
-	       std::vector<std::string>& input_units, std::string& current_unit);
-void compare(std::vector<double> list_of_values, double value);
-
 /*
  * returns the sum of a list
  */
