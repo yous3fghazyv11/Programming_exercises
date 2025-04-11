@@ -1,16 +1,13 @@
 #include <iostream>
-#include <vector>
+#include <ostream>
 
 int main()
 {
-    std::vector<char> chars;
-    std::cout << "Please type a string below:" << std::endl << "> ";
-	for (char temp; std::cin >> temp;)
-        chars.push_back(temp);
-    int temp = 0;
-    for (char ch : chars) {
-        temp = ch;
-        std::cout << "First letter: " << ch << " = " << temp << std::endl;
+    std::cout << "Please type a string below: " << std::endl << "> ";
+    std::string temp_string;
+    std::getline(std::cin, temp_string);
+	for (char ch : temp_string) {
+        if (ch == ' ') continue;
+        std::cout << "letter \033[32m'" << ch << "'\033[0m:\033[32m " << static_cast<int>(ch) << "\033[0m" << std::endl;
     }
-    return 0;
 }
